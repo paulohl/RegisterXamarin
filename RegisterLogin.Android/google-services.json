@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "118360059747",
+    "project_id": "registerlogin-372905",
+    "storage_bucket": "registerlogin-372905.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118360059747:android:026ac5bd7db251347aed56",
+        "android_client_info": {
+          "package_name": "com.companyname.registerlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118360059747-6koor0oma0u8mi0rmn5384dus86i1hi2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.registerlogin",
+            "certificate_hash": "16989c8f6e2b74238904d4e26e6dd9fdaad0a338"
+          }
+        },
+        {
+          "client_id": "118360059747-idcorlusujq438phim3j6vrvquqd51l3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.companyname.registerlogin",
+            "certificate_hash": "659c40edf6b79537e8f43e15ff03e926ae4abd76"
+          }
+        },
+        {
+          "client_id": "118360059747-vf07dn5rng3shg9q6qdvkigiv0ksuhfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjfoeOtxW7shsqckPtTi99j-aBm_OPLJo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118360059747-vf07dn5rng3shg9q6qdvkigiv0ksuhfn.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "118360059747-lr4gcfjdbi54f2p1ab3vvlj73j0vsdt6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.companyname.RegisterLogin"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

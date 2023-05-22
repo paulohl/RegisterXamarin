@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RegisterLogin.Views.RegisterPage">
+    
+    <ScrollView>
+        <StackLayout BackgroundColor="WhiteSmoke">
+            <Grid>
+                <StackLayout HorizontalOptions="CenterAndExpand" >
+                    <AbsoluteLayout Margin="0,10,0,0">
+                        <FlexLayout IsVisible="True" JustifyContent="SpaceEvenly" Direction="Column" AlignItems="Center">
+                            <Image Source="PP.png" HeightRequest="100" FlexLayout.AlignSelf="Center" BackgroundColor="Transparent" />
+                        </FlexLayout>
+                    </AbsoluteLayout>
+                    <Label Text="SIGN UP" TextColor="Black" FontSize="Medium" FontAttributes="Bold" Margin="0,10,0,0" HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Margin="15,160,15,0" >
+                    <Frame  HasShadow="True" HeightRequest="640" CornerRadius="12">
+                        <StackLayout Spacing="20">
+                            <StackLayout Margin="0,5,0,0">
+                                <StackLayout>
+
+
+                                    <Frame  BorderColor="DarkGray" Padding="0" Margin="0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="40" >
+                                        <StackLayout Orientation="Horizontal">
+
+                                            <Image Source="user.png" Margin="10,7,0,7" WidthRequest="13"/>
+
+                                            <Entry x:Name="FirstName" Placeholder="FirstName" PlaceholderColor="LightGray" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,0,0" />
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,0,0,0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="40" >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="user.png" Margin="10,7,0,7" WidthRequest="13"/>
+                                            <Entry x:Name="LastName" Placeholder="LastName" PlaceholderColor="LightGray" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,16,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+
+                                <Frame  BorderColor="DarkGray" Padding="0" Margin="0,5,0,0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="40">
+                                    <StackLayout Orientation="Horizontal">
+
+                                        <Image Source="Email.png" Margin="10,7,0,7" WidthRequest="13"/>
+
+                                        <Entry x:Name="EmailFields" Placeholder="Email" PlaceholderColor="LightGray" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0" />
+                                    </StackLayout>
+                                </Frame>
+                                <StackLayout>
+                                    <Label Text="We'll never share your Email with anyone else." TextColor="Black" FontSize="Micro" Margin="0"/>
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="I'll use ProjectPlacer as a" FontSize="Micro" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                                    <CheckBox x:Name="CompanyChkBox" IsChecked="False" Color="DarkGray" Margin="0,0,0,0" CheckedChanged="CompanyChkBox_CheckedChanged"/>
+                                    <Label Text="Company" TextColor="Black" FontSize="Micro" Margin="0,8,0,0"/>
+                                    <CheckBox x:Name="ResourceChkBox" IsChecked="False" Color="DarkGray" Margin="0,0,0,0" CheckedChanged="ResourceChkBox_CheckedChanged" />
+                                    <Label Text="Resource" TextColor="Black" FontSize="Micro" Margin="0,8,0,0"/>
+
+                                </StackLayout>
+
+                                <StackLayout x:Name="CompanyInfo" IsVisible="false">
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,0,0,0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="40" >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="user.png" Margin="10,7,0,7" WidthRequest="13"/>
+                                            <Entry x:Name="CompanyName" Placeholder="Company Name" PlaceholderColor="LightGray" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,16,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                    <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="0,0,0,0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="40" >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Image Source="user.png" Margin="10,7,0,7" WidthRequest="13"/>
+                                            <Entry x:Name="CompanyURL" Placeholder="https://example.com" PlaceholderColor="LightGray" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,16,0"/>
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+
+                                <StackLayout>
+                                    <Picker x:Name="IndustryPicker"  ItemDisplayBinding="{Binding INDS_DESC}" BackgroundColor="AliceBlue" TextColor="Black" TitleColor="Black" Title="Select Industry"    />
+
+                                </StackLayout>
+
+                                <StackLayout>
+                                    <Frame  BorderColor="DarkGray" Padding="0" Margin="0,5,0,0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="40">
+                                        <StackLayout Orientation="Horizontal">
+
+                                            <Image Source="padlock.png" Margin="10,7,0,7" WidthRequest="13"/>
+
+                                            <Entry x:Name="PasswordField" Placeholder="Password" IsPassword="True" PlaceholderColor="LightGray" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0" />
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame  BorderColor="DarkGray" Padding="0" Margin="0,5,0,0" CornerRadius="10" HorizontalOptions="FillAndExpand" HeightRequest="40">
+                                        <StackLayout Orientation="Horizontal">
+
+                                            <Image Source="padlock.png" Margin="10,7,0,7" WidthRequest="13"/>
+
+                                            <Entry x:Name="ConfirmPasswordField" Placeholder="Confirm password" IsPassword="True" PlaceholderColor="LightGray" TextColor="Black" HorizontalOptions="FillAndExpand" Margin="0,0,15,0" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout Margin="0,10,0,0">
+                                    <Button Text="Register" BackgroundColor="#1EBEFF" Clicked="registerButton_Clicked" TextColor="White" FontAttributes="Bold" CornerRadius="30"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <BoxView BackgroundColor="DarkGray" HeightRequest="1" Margin="10" HorizontalOptions="CenterAndExpand" WidthRequest="100" />
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <!--<Frame BackgroundColor="Transparent" WidthRequest="30" Padding="0" Margin="10" HasShadow="False">
+                                            <Image Source="{local:EmbeddedImages flayer.Images.windows-logo.png}"/>
+                                        </Frame>-->
+                                        <Frame WidthRequest="35" Padding="0" Margin="10" HeightRequest="30" HasShadow="False" >
+                                            <Image Source="google.png"/>
+                                        </Frame>
+                                        <Frame BackgroundColor="Transparent" WidthRequest="35" Padding="0" Margin="10" HasShadow="False">
+                                            <Image Source="linkedin.png"/>
+
+                                        </Frame>
+                                    </StackLayout>
+                                    <Frame CornerRadius="10">
+                                        <StackLayout>
+                                            <Label Text="By logging in, you agree to projectPlacer's Terms and Conditions" TextColor="Black" FontSize="Micro" HorizontalTextAlignment="Center"/>
+                                            <BoxView HeightRequest="1" BackgroundColor="LightGray"/>
+                                            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                                                <Label Text="Have an account?" VerticalOptions="Fill" VerticalTextAlignment="Center" TextColor="Black" FontSize="Micro" HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+                                                <Button Text="login" BackgroundColor="Transparent" TextColor="#1EBEFF" FontAttributes="Bold" Clicked="loginButton_Clicked"/>
+                                                <!--<Label Text="LOGIN" TextColor="Purple" FontSize="Micro" HorizontalTextAlignment="Center" FontAttributes="Bold"/>-->
+                                            </StackLayout>
+
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
